@@ -1,0 +1,21 @@
+---
+import './Gif.css';
+import { Image } from 'astro:assets';
+import yipeeGif from './yipee.gif';
+
+interface Props {
+	x: string;
+	y: string;
+}
+
+const {x, y} = Astro.props;
+---
+
+<div>
+  <img src={yipeeGif.src} alt="YIPEEEEEEEE" style="width:70px;height:70px;">
+</div>
+<style>
+  img{
+    position: fixed;
+  }
+</style>
