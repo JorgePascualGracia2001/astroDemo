@@ -6,7 +6,7 @@ import "./index.css";
 
 <Layout title="Cuenta Atrás">
   <script>
-  import yipeeGif from '../components/Gif/yipee.gif';
+  import yipeeGif from '../../public/yipee.gif';
 
     // handling the countDown
     setInterval(generateCountdownText, 1000);
@@ -39,7 +39,10 @@ import "./index.css";
       }
     }
     
-    document.getElementById("yipee").addEventListener("click", handleClick);
+    const yipee = document.getElementById("yipee")
+    if (yipee) {
+      yipee.addEventListener("click", handleClick);
+    }
 
     // summon the yippe
     function handleClick () {
